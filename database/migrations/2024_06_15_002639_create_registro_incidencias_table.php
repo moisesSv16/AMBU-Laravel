@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('registro_incidencias', function (Blueprint $table) {
-            $table->integer('idIncidencia')->primary();
+            $table->bigIncrements('idIncidencia');
             $table->integer('idUsuario');
             $table->integer('idPuntoRecorrido');
             $table->integer('idTipo');

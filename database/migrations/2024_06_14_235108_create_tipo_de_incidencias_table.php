@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tipo_de_incidencias', function (Blueprint $table) {
-            $table->integer('idTipo')->primary();
+            $table->bigIncrements('idTipo');
             $table->string('Nombre');
             $table->timestamps();
         });

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('puntos_recorridos', function (Blueprint $table) {
-            $table->integer('idPuntoRecorrido')->primary();
+            $table->bigIncrements('idPuntoRecorrido');
             $table->integer('idParque');
             $table->string('Nombre');
             $table->timestamps();
