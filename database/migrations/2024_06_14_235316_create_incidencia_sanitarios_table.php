@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('incidencia_sanitarios', function (Blueprint $table) {
             $table->bigIncrements('idSolicitud');
-            $table->integer('idTipo');
+            $table->bigInteger('idTipo');
             $table->string('Solicitud_incidencia');
             $table->string('Descripcion');
             $table->timestamps();
 
-            $table->foreign('idTipo')
+            /*$table->foreign('idTipo')
                   ->references('idTipo')
                   ->on('tipo_de_incidencias')
-                  ->onDelete('cascade');
+                  ->onDelete('cascade');*/
         });
     }
 

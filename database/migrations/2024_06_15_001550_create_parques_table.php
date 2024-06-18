@@ -17,10 +17,7 @@ return new class extends Migration
             $table->string('Nombre');
             $table->timestamps();
 
-            $table->foreign('idMunicipio')
-                  ->references('idMunicipio')
-                  ->on('municipios')
-                  ->onDelete('cascade');
+            
         });
     }
 

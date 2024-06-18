@@ -17,10 +17,7 @@ return new class extends Migration
             $table->string('Nombre');
             $table->timestamps();
 
-            $table->foreign('idParque')
-                  ->references('idParque')
-                  ->on('parques')
-                  ->onDelete('cascade');
+            
         });
     }
 

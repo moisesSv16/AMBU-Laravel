@@ -22,9 +22,9 @@ return new class extends Migration
             $table->string('Estado');       
             $table->timestamps();
 
-            $table->foreign('idUsuario')->references('idUsuario')->on('usuarios')->onDelete('cascade');
+            /*$table->foreign('idUsuario')->references('idUsuario')->on('usuarios')->onDelete('cascade');
             $table->foreign('idPuntoRecorrido')->references('idPuntoRecorrido')->on('puntos_recorridos')->onDelete('cascade');
-            $table->foreign('idTipo')->references('idTipo')->on('tipo_de_incidencias')->onDelete('cascade');
+            $table->foreign('idTipo')->references('idTipo')->on('tipo_de_incidencias')->onDelete('cascade');*/
 
 
         });

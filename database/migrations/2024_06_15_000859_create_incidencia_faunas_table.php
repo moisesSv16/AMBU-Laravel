@@ -18,10 +18,7 @@ return new class extends Migration
             $table->string('Descripcion');
             $table->timestamps();
 
-            $table->foreign('idTipo')
-                  ->references('idTipo')
-                  ->on('tipo_de_incidencias')
-                  ->onDelete('cascade');
+           
         });
     }
 
