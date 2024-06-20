@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', 'App\Http\Controllers\MaquinariasController@ver');
-Route::get('/galeria', 'App\Http\Controllers\MaquinariasController@galeria');
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
 Route::post('/guardar', [App\Http\Controllers\IncidenciasController::class, 'guardar'])->name('guardar');
