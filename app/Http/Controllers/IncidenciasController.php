@@ -12,8 +12,20 @@ class IncidenciasController extends Controller
      */
     public function index()
     {
-        //
+        
     }
+
+    public function mostrar()
+    {
+        $mostrar=Registro_incidencias::all();
+
+        $nombrePersonalizado = 'incidencias';  // Puedes cambiar este nombre según tus preferencias
+        $response = [
+            $nombrePersonalizado => $mostrar
+        ];
+        return response()->json($response);
+    }
+
     public function guardar(Request $request)
     {
         $guardar = new Registro_incidencias();

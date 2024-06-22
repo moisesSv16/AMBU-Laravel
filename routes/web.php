@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 
 Route::post('/guardar', [App\Http\Controllers\IncidenciasController::class, 'guardar'])->name('guardar');
+Route::get('/incidencias', 'App\Http\Controllers\IncidenciasController@mostrar');
+
 
 
 
