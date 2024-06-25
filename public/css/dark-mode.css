@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: lightblue;
+}
+
+button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgray;
+}
+
+input, select, textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.25);
+}
