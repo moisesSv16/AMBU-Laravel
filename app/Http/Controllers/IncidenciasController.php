@@ -40,13 +40,32 @@ class IncidenciasController extends Controller
         $guardar->Estado = $request->input('Estado');
         
         */
+        
         $guardar = new Registro();
+
+        if ($request->has('Imagen')) {
+            $base64Image = $request->input('Imagen');
+            $image = base64_decode($base64Image);
+            
+            // Crear un nombre único para la imagen
+            $imgnombre = time() . '.png';
+            
+            // Ruta donde se guardará la imagen
+            $url = 'imagenes/';
+            $path = public_path($url . $imgnombre);
+    
+            // Guardar la imagen decodificada en el servidor
+            file_put_contents($path, $image);
+    
+            // Asignar la ruta de la imagen al modelo
+            $guardar->Imagen = $url . $imgnombre;
+        }
+
         $guardar->Parque = $request->input('Parque');
         $guardar->Municipio = $request->input('Municipio');
         $guardar->Nombre = $request->input('Nombre');
         $guardar->Tipo = $request->input('Tipo');
         $guardar->Descripcion = $request->input('Descripcion');
-        $guardar->Imagen = $request->input('Imagen');
         $guardar->Estado = "Activo";
         $guardar->save();
         
