@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Registro_incidencias;
+use App\Models\Registro;
+
 
 class IncidenciasController extends Controller
 {
@@ -28,7 +30,7 @@ class IncidenciasController extends Controller
 
     public function guardar(Request $request)
     {
-        $guardar = new Registro_incidencias();
+        /*$guardar = new Registro_incidencias();
         $guardar->idUsuario = $request->input('idUsuario');
         $guardar->idPuntoRecorrido = $request->input('idPuntoRecorrido');
         $guardar->idTipo = $request->input('idTipo');
@@ -37,7 +39,15 @@ class IncidenciasController extends Controller
         $guardar->Imagen = $request->input('Imagen');
         $guardar->Estado = $request->input('Estado');
         
-        
+        */
+        $guardar = new Registro();
+        $guardar->Parque = $request->input('Parque');
+        $guardar->Municipio = $request->input('Municipio');
+        $guardar->Nombre = $request->input('Nombre');
+        $guardar->Tipo = $request->input('Tipo');
+        $guardar->Descripcion = $request->input('Descripcion');
+        $guardar->Imagen = $request->input('Imagen');
+        $guardar->Estado = "Activo";
         $guardar->save();
         
         // Devolver la respuesta JSON con la parte actualizada
