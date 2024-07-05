@@ -29,6 +29,27 @@ class IncidenciasController extends Controller
         return response()->json($response);
     }
 
+    public function movil()
+    {
+        $mostrar=Registro::all();
+
+        $nombrePersonalizado = 'incidencias';  // Puedes cambiar este nombre según tus preferencias
+        $response = [
+            $nombrePersonalizado => $mostrar
+        ];
+        return response()->json($response);
+    }
+    public function movilid(string $id)
+    {
+        $registro=Registro::where('id', '=', $id)->get();
+        $nombrePersonalizado = 'incidencias';  
+        $response = [
+            $nombrePersonalizado => $registro
+        ];
+        
+        return response()->json($response);
+    }
+
     public function guardar(Request $request)
 {
     //\Log::info('Contenido del cuerpo de la solicitud:', [$request->getContent()]);
