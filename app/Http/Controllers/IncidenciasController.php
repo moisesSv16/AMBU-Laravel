@@ -42,12 +42,9 @@ class IncidenciasController extends Controller
     public function movilid(string $id)
     {
         $registro=Registro::where('id', '=', $id)->get();
-        $nombrePersonalizado = 'incidencias';  
-        $response = [
-            $nombrePersonalizado => $registro
-        ];
         
-        return response()->json($response);
+        
+        return response()->json($registro);
     }
 
     public function guardar(Request $request)
