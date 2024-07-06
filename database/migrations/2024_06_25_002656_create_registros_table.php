@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('Municipio');
             $table->string('Nombre');       
             $table->string('Tipo');
+            $table->string('Tipo_incidencia');
             $table->string('Descripcion'); 
             $table->string('Imagen');   
             $table->string('Estado');   

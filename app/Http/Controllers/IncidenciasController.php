@@ -68,7 +68,7 @@ class IncidenciasController extends Controller
     \Log::info('Datos decodificados:', $datos);
 
     // Validar los datos decodificados
-    if (!isset($datos['Parque'], $datos['Municipio'], $datos['Nombre'], $datos['Tipo'], $datos['Descripcion'])) {
+    if (!isset($datos['Parque'], $datos['Municipio'], $datos['Nombre'], $datos['Tipo'], $datos['Tipo_incidencia'], $datos['Descripcion'])) {
         return response()->json(['message' => 'Faltan datos requeridos'], 400);
     }
 
@@ -103,6 +103,7 @@ class IncidenciasController extends Controller
     $guardar->Municipio = $datos['Municipio'];
     $guardar->Nombre = $datos['Nombre'];
     $guardar->Tipo = $datos['Tipo'];
+    $guardar->Tipo_incidencia = $datos['Tipo_incidencia'];
     $guardar->Descripcion = $datos['Descripcion'];
     $guardar->Estado = "Activo";
     $guardar->save();
