@@ -1,0 +1,13 @@
+GET http://127.0.0.1:8000/mostrar
+
+
+POST http://127.0.0.1:8000/guardar
+Content-Type: application/json
+{
+    "Parque": "Nombre del Parque2",
+    "Municipio": "Nombre del Municipio2",
+    "Nombre": "Nombre de la Incidencia2",
+    "Tipo": "Tipo de Incidencia2",
+    "Tipo_incidencia": "Tipo específico de Incidencia2",
+    "Descripcion": "Descripción detallada de la Incidencia2"
+}

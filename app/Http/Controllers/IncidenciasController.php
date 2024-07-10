@@ -62,7 +62,7 @@ class IncidenciasController extends Controller
 
     if (json_last_error() !== JSON_ERROR_NONE) {
         \Log::error('Error al decodificar JSON:', ['error' => json_last_error_msg()]);
-        return response()->json(['message' => 'Formato de JSON inválido'], 400);
+        return response()->json(['message' => 'Formato de JSON invalido'.$cuerpo ], 400);
     }
 
     \Log::info('Datos decodificados:', $datos);
@@ -95,6 +95,8 @@ class IncidenciasController extends Controller
 
         // Asignar la ruta de la imagen al modelo
         $guardar->Imagen = $url . $imgnombre;
+    }else{
+        $guardar->Imagen = 'SIN IMAGEN';
     }
 
     $guardar->Parque = $datos['Parque'];
