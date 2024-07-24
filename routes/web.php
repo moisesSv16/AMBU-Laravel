@@ -20,6 +20,12 @@ Route::get('/', function () {
 
 
 Route::post('/guardar', [App\Http\Controllers\IncidenciasController::class, 'guardar'])->name('guardar');
+Route::post('/fauna', [App\Http\Controllers\IncidenciasController::class, 'fauna'])->name('fauna');
+Route::post('/seguridad', [App\Http\Controllers\IncidenciasController::class, 'seguridad'])->name('seguridad');
+Route::post('/forestal', [App\Http\Controllers\IncidenciasController::class, 'forestal'])->name('forestal');
+Route::post('/sanitarios', [App\Http\Controllers\IncidenciasController::class, 'sanitarios'])->name('sanitarios');
+
+
 Route::get('/incidencias', 'App\Http\Controllers\IncidenciasController@mostrar');
 Route::get('/mostrar', 'App\Http\Controllers\IncidenciasController@movil');
 Route::get('/mostrarid/{id}', 'App\Http\Controllers\IncidenciasController@movilid')->name('mostrarid');
