@@ -147,7 +147,7 @@ class IncidenciasController extends Controller
 
      public function fauna(Request $request)
      {
-        // \Log::info('Contenido del cuerpo de la solicitud:', [$request->getContent()]);
+         \Log::info('Contenido del cuerpo de la solicitud:', [$request->getContent()]);
      
          // Extraer el contenido del cuerpo de la solicitud
          $cuerpo = $request->getContent();
@@ -165,7 +165,7 @@ class IncidenciasController extends Controller
              return response()->json(['message' => 'Formato de JSON inválido'], 400);
          }
      
-        // \Log::info('Datos decodificados:', $datos);
+         \Log::info('Datos decodificados:', $datos);
      
          // Validar los datos decodificados
          $camposRequeridos = ['Parque', 'Municipio', 'Ubicacion','Agente', 'Tipo', 'Especie','Condicion','Tamano', 'Descripcion','Riesgo'];
@@ -207,7 +207,7 @@ class IncidenciasController extends Controller
          $guardar->Tipo = $datos['Tipo'];
          $guardar->Especie = $datos['Especie'];
          $guardar->Condicion = $datos['Condicion'];
-         $guardar->Tamaño = $datos['Tamaño'];
+         $guardar->Tamno = $datos['Tamano'];
          $guardar->Descripcion = $datos['Descripcion'];
          $guardar->Riesgo = $datos['Riesgo'];
          $guardar->Estado = "Activo";
