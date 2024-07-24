@@ -168,7 +168,7 @@ class IncidenciasController extends Controller
         // \Log::info('Datos decodificados:', $datos);
      
          // Validar los datos decodificados
-         $camposRequeridos = ['Parque', 'Municipio', 'Ubicacion','Agente', 'Tipo', 'Especie','Condicion','Tamaño', 'Descripcion','Riesgo'];
+         $camposRequeridos = ['Parque', 'Municipio', 'Ubicacion','Agente', 'Tipo', 'Especie','Condicion','Tamano', 'Descripcion','Riesgo'];
          foreach ($camposRequeridos as $campo) {
              if (!isset($datos[$campo])) {
                  return response()->json(['message' => 'Faltan datos requeridos'], 400);
