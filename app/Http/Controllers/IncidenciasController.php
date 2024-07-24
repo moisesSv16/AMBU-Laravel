@@ -207,7 +207,7 @@ class IncidenciasController extends Controller
          $guardar->Tipo = $datos['Tipo'];
          $guardar->Especie = $datos['Especie'];
          $guardar->Condicion = $datos['Condicion'];
-         $guardar->Tamno = $datos['Tamano'];
+         $guardar->Tamano = $datos['Tamano'];
          $guardar->Descripcion = $datos['Descripcion'];
          $guardar->Riesgo = $datos['Riesgo'];
          $guardar->Estado = "Activo";
