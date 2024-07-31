@@ -14,6 +14,10 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         '/guardar',
         '/mostrar',
+        '/fauna',
+        '/seguridad',
+        '/forestal',
+        '/sanitarios',
         '/mostrarid/{id}'
     ];
 }

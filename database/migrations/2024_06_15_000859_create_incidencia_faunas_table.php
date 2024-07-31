@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('Tipo');
             $table->string('Especie');
             $table->string('Condicion');
-            $table->string('Tamaño');
+            $table->string('Tamano');
             $table->string('Descripcion');
             $table->string('Riesgo');
             $table->string('Imagen');
