@@ -27,9 +27,9 @@ class IncidenciasController extends Controller
      * ------------------------------------------------------------------------------------------------------------------------------------
      */
 
-    public function mostrar()
+     public function mostrar()
     {
-        $mostrar=Registro_incidencias::all();
+        $mostrar=Registro::all();
 
         $nombrePersonalizado = 'incidencias';  // Puedes cambiar este nombre según tus preferencias
         $response = [

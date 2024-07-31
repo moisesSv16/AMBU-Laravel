@@ -27,7 +27,9 @@ Route::post('/sanitarios', [App\Http\Controllers\IncidenciasController::class, '
 
 
 Route::get('/incidencias', 'App\Http\Controllers\IncidenciasController@mostrar');
+
 Route::get('/mostrar', 'App\Http\Controllers\IncidenciasController@movil');
+
 Route::get('/mostrarid/{id}', 'App\Http\Controllers\IncidenciasController@movilid')->name('mostrarid');
 
 
