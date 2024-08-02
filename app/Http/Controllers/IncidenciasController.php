@@ -29,7 +29,7 @@ class IncidenciasController extends Controller
 
      public function mostrar()
     {
-        $mostrar=Registro::all();
+        $mostrar=Incidencia_mantenimiento_infraestructura::all();
 
         $nombrePersonalizado = 'incidencias';  // Puedes cambiar este nombre según tus preferencias
         $response = [
@@ -60,7 +60,7 @@ class IncidenciasController extends Controller
 
     public function movilid(string $id)
     {
-        $registro=Registro::where('id', '=', $id)->get();
+        $registro=Incidencia_mantenimiento_infraestructura::where('id', '=', $id)->get();
         
         
         return response()->json($registro);
