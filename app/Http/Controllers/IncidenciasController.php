@@ -37,6 +37,26 @@ class IncidenciasController extends Controller
         ];
         return response()->json($response);
     }
+    public function mostrar_fauna()
+    {
+        $mostrar=Incidencia_fauna::all();
+
+        $nombrePersonalizado = 'incidencias';  // Puedes cambiar este nombre según tus preferencias
+        $response = [
+            $nombrePersonalizado => $mostrar
+        ];
+        return response()->json($response);
+    }
+    public function mostrar_sanitarios()
+    {
+        $mostrar=Incidencia_sanitarios::all();
+
+        $nombrePersonalizado = 'incidencias';  // Puedes cambiar este nombre según tus preferencias
+        $response = [
+            $nombrePersonalizado => $mostrar
+        ];
+        return response()->json($response);
+    }
 
     /**
      * ------------------------------------------------------------------------------------------------------------------------------------
