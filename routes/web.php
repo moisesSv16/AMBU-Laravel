@@ -27,6 +27,9 @@ Route::post('/sanitarios', [App\Http\Controllers\IncidenciasController::class, '
 
 
 Route::get('/incidencias', 'App\Http\Controllers\IncidenciasController@mostrar');
+Route::get('/mostrar_fauna', 'App\Http\Controllers\IncidenciasController@mostrar_fauna');
+Route::get('/mostrar_sanitarios', 'App\Http\Controllers\IncidenciasController@mostrar_sanitarios');
+
 
 Route::get('/mostrar', 'App\Http\Controllers\IncidenciasController@movil');
 
