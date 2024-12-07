@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Incidencia_fauna extends Model
 {
     use HasFactory;
+    public $timestamps = true;
 }

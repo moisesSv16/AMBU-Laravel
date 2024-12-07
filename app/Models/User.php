@@ -27,6 +27,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'idArea', // Campo adicional
+        'idPerfil', // Campo adicional
+        'NumeroEmpleado', // Campo adicional
+        'Apellidos', // Campo adicional
+        'estado', // Campo adicional
     ];
 
     /**
